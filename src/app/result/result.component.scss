@@ -1,0 +1,24 @@
+mat-card{
+  width: 93vw;
+  margin-top: 10px;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+}
+mat-divider{
+  margin: 1em 0;
+}
+
+.titulo{
+  display: flex;
+  justify-content: space-between;
+}
+
+.content{
+  margin-top: 1em;
+}
+
+
+.copyButton{
+  margin-right: 1em;
+}

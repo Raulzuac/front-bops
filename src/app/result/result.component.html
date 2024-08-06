@@ -1,0 +1,23 @@
+<mat-card>
+<div class="titulo">
+  <div>
+    <h2><span>{{bop.bop.place}}</span> - <span>{{formatDate(bop.bop.date)}}</span> - Página <span>{{bop.num_page}}</span></h2>
+  </div>
+  <div>
+    <!-- <button mat-fab matTooltip="Visualizar el PDF" class="copyButton"><mat-icon>visibility</mat-icon></button> -->
+    <button matTooltip="Copiar el enlace de descarga" (click)="copyLink()" mat-fab aria-label="Copiar el enlace de descarga" class="copyButton">
+      <mat-icon>content_copy</mat-icon>
+    </button>
+    <button matTooltip="Descargar el PDF" (click)="downloadPDF()" mat-fab aria-label="Descargar el archivo">
+      <mat-icon>download</mat-icon>
+    </button>
+  </div>
+</div>
+<mat-divider></mat-divider>
+<div>
+  Contenido:
+</div>
+<div class="content">
+  {{bop.content}}
+</div>
+</mat-card>

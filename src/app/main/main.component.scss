@@ -1,0 +1,46 @@
+.screen{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('/assets/main-background-slate.jpg');
+}
+
+.search-input{
+    width: 100%;
+}
+
+
+.content{
+  form{
+    text-align: center;
+    width: 100%;
+  }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  background-color: rgba(142, 165, 222, 0.8);
+  padding: 2em;
+  border-radius: 1em;
+  box-shadow: 0 0 100px 1px rgba(0, 0, 0, 0.5);
+}
+
+mat-divider{
+  margin-top: 2em;
+  width: 100%;
+}
+
+.pre-searchs{
+  width: 100%;
+}
+
+
+
+.dateSelector{
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}

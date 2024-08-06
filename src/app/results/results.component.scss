@@ -1,0 +1,39 @@
+.screen{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url('/assets/main-background-slate.jpg');
+}
+
+.header{
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 95%;
+  height: 5vh;
+  border-radius: 10px;
+  background-color: rgba(142, 165, 222, 0.8);
+}
+
+.main{
+  overflow: auto;
+  margin-top: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 95%;
+  height: 90vh;
+  border-radius: 10px;
+}
+
+
+a{
+  color: black;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}

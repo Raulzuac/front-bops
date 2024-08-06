@@ -1,0 +1,15 @@
+<div class="screen">
+<div class="header">
+  <a href="/"><mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="home"></mat-icon></a>
+  <h2>Búsqueda de oposiciones</h2>
+</div>
+<div class="main">
+  @if (bops) {
+    @for (bop of bops; track $index) {
+      <result [bop]="bop"></result>
+    }
+  }@else {
+
+  }
+</div>
+</div>
