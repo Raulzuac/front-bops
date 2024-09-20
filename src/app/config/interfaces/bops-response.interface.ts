@@ -10,6 +10,9 @@ export interface BopResponse {
   bopId:      string;
   content:    string;
   bop:        Bop;
+  pre_coincidence?: string;
+  coincidence?:     string;
+  post_coincidence?: string;
 }
 
 export interface Bop {

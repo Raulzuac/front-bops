@@ -4,6 +4,7 @@ import { BopResponse } from '../config/interfaces/bops-response.interface';
 
 import { HttpClient } from '@angular/common/http';
 import { preSearchTypes } from '../config/pre-search-types';
+import { SearchInterface } from '../config/interfaces/search-query.interface';
 
 @Injectable({
   providedIn: 'root'
@@ -19,12 +20,12 @@ export class BopsService {
 
   preSearchIds = preSearchTypes.map((type) => type.value);
 
-  getBops(criteria: string):Observable<BopResponse[]> {
-    if(!this.preSearchIds.includes(criteria)) {
+  getBops(criteria: SearchInterface):Observable<BopResponse[]> {
+    if(!this.preSearchIds.includes(criteria.criteria[0]) && criteria.criteria.length > 0){
 
-      return this.http.get<BopResponse[]>(`${this.url}bops?content=${criteria}`);
+      return this.http.post<BopResponse[]>(`${this.url}search`,criteria)
     }
-    const query = preSearchTypes.find((type) => type.value === criteria);
+    const query = preSearchTypes.find((type) => type.value === criteria.criteria[0]);
     return this.http.get<BopResponse[]>(`${this.url}${query?.name}`);
 
   }

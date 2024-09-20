@@ -1,0 +1,23 @@
+{
+  "workbench.colorCustomizations": {
+    "activityBar.background": "#b7522e", // Naranja oscuro
+    "titleBar.activeBackground": "#a14222", // Naranja aún más oscuro
+    "titleBar.activeForeground": "#e7e7e7", // Blanco
+    "activityBar.activeBackground": "#b7522e", // Naranja oscuro
+    "activityBar.activeBorder": "#c96742", // Naranja rojizo oscuro
+    "activityBar.foreground": "#d3d7de", // Gris claro
+    "activityBar.inactiveForeground": "#d3d7de80", // Gris claro transparente
+    "activityBarBadge.background": "#c96742", // Naranja rojizo oscuro
+    "activityBarBadge.foreground": "#e7e7e7", // Blanco
+    "statusBar.background": "#a14222", // Naranja aún más oscuro
+    "statusBar.foreground": "#d3d7de", // Gris claro
+    "statusBarItem.hoverBackground": "#b7522e", // Naranja oscuro
+    "titleBar.inactiveBackground": "#a1422280", // Naranja aún más oscuro transparente
+    "titleBar.inactiveForeground": "#d3d7de80" // Gris claro transparente
+  },
+  "peacock.color": "#a14222", // Naranja aún más oscuro
+  "eslint.format.enable": true,
+  "eslint.alwaysShowStatus": true,
+  "eslint.debug": true,
+  "typescript.tsdk": "node_modules/typescript/lib"
+}
