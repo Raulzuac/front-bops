@@ -61,12 +61,12 @@ export class MainComponent {
   }
 
   search(criteria:string){
-    //sacamos la fecha de los datepickers
 
-    console.log(this.date_from);
-    console.log(this.date_to);
+    const start_date = this.date_from?.toLocaleDateString('es-ES');
+    const end_date = this.date_to?.toLocaleDateString('es-ES');
 
-    this.router.navigate(['/results'], { queryParams: { criteria,start_date:"15/09/2024",end_date:"17/09/2024" } });
+
+    this.router.navigate(['/results'], { queryParams: { criteria,start_date:start_date,end_date:end_date } });
   }
 
 }

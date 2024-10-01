@@ -21,7 +21,8 @@ export class ResultComponent {
 
   constructor(
     private _snackBar: MatSnackBar
-  ) { }
+  ) {
+   }
 
 
   copyLink(){
@@ -37,7 +38,6 @@ export class ResultComponent {
 
 
   formatDate(date:Date):string{
-    // 2024-07-31 > 31/07/2024
     const dateString = date.toString();
     const year = dateString.substring(0,4);
     const month = dateString.substring(5,7);

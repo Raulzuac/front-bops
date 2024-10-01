@@ -49,6 +49,8 @@ export class ResultsComponent {
           this.notFound = true;
         }
         this.bops = bops.sort((a, b) => b.bop.date > a.bop.date ? 1: 0);
+        console.log(this.bops);
+
       })
     }else{
       this.router.navigate(['/']);

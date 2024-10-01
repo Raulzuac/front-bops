@@ -26,6 +26,7 @@ export class BopsService {
       return this.http.post<BopResponse[]>(`${this.url}search`,criteria)
     }
     const query = preSearchTypes.find((type) => type.value === criteria.criteria[0]);
+    console.log(criteria)
     return this.http.get<BopResponse[]>(`${this.url}${query?.name}`);
 
   }
