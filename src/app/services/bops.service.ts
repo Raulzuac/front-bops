@@ -16,7 +16,7 @@ export class BopsService {
   ) { }
 
 
-  url = 'http://localhost:3000/'
+  url = 'http://217.182.209.193:3000/'
 
   preSearchIds = preSearchTypes.map((type) => type.value);
 
