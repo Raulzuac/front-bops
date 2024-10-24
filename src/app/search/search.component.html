@@ -1,0 +1,44 @@
+<div class="content">
+  <h1 class="title">Encuentra tu boletín</h1>
+  <h2 class="subtitle">Busca entre todos los boletines oficiales de provincias y nacionales.</h2>
+  <div class="search-bar">
+    <input (input)="checkReady()" [(ngModel)]="search_criteria" class="input" placeholder="¿Qué deseas buscar?">
+    <input (change)="checkReady()" [(ngModel)]="date_from" class="date-picker" type="date" [(min)]="min_date_start" [(max)]="max_date_start">
+    <input (change)="checkReady()" [(ngModel)]="date_to" class="date-picker" type="date" [(min)]="min_date_end" [(max)]="max_date_end">
+    <button [ngClass]="{'button':true,'disabled':!ready}" (click)="search(search_criteria!)">Comenzar búsqueda</button>
+  </div>
+  <div class="instruccions">
+    <img src="https://buscaboletines.com/wp-content/uploads/2024/10/Instrucciones-de-uso.png" alt="Imagen busqueda">
+    <p class="search-text">Ver instrucciones de uso</p>
+  </div>
+  <!--
+  <h1>Búsqueda de boletines</h1>
+  <mat-form-field class="search-input" >
+    <mat-label>Inserta el criterio de búsqueda</mat-label>
+    <input #criteria  matInput placeholder="Ej. Oposiciones informáticas" [(ngModel)]="search_criteria" (ngModelChange)="checkReady()">
+    <mat-hint>Inserta las palabras que quieras buscar, indica la cantidad de caracteres entre '$' entre cada palabra, por ejemplo obras$100$calle</mat-hint>
+  </mat-form-field>
+  <div class="dateSelector">
+    <mat-form-field>
+      <mat-label>Desde</mat-label>
+      <input [min]="min_date_start" [max]="max_date_start" matInput [matDatepicker]="dateFrom" [(ngModel)]="date_from" (ngModelChange)="checkReady()">
+      <mat-hint>MM/DD/YYYY</mat-hint>
+      <mat-datepicker-toggle matIconSuffix [for]="dateFrom"></mat-datepicker-toggle>
+      <mat-datepicker #dateFrom></mat-datepicker>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Hasta</mat-label>
+      <input [min]="min_date_end" [max]="max_date_end" matInput [matDatepicker]="dateTo" [(ngModel)]="date_to" (ngModelChange)="checkReady()">
+      <mat-hint>MM/DD/YYYY</mat-hint>
+      <mat-datepicker-toggle matIconSuffix [for]="dateTo"></mat-datepicker-toggle>
+      <mat-datepicker #dateTo></mat-datepicker>
+    </mat-form-field>
+
+  </div>
+  <button disabled="{{!ready}}" (click)="search(criteria.value)" mat-raised-button color="primary">Buscar</button>
+  <mat-divider></mat-divider>
+  <div class="pre-searchs">
+    <h3>Pre-búsquedas</h3>
+    <a href="/results?criteria=01J495EZYR3CYSKHCWHQ543J7D"><button mat-raised-button color="primary">Oposiciones deportivas</button></a>
+  </div> -->
+</div>

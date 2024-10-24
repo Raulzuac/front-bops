@@ -1,0 +1,107 @@
+.content {
+  height: 80vh;
+  width: 97vw;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.search-bar{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+
+.input {
+  font-size: 1.5em;
+  border: 1px solid gray;
+  border-radius: 20px;
+  height: 2em;
+  width: 100%;
+  padding: 0.5em;
+}
+
+.button{
+  font-size: 1.5em;
+  border: 1px solid #fca311;
+  border-radius: 20px;
+  background-color: #fca311;
+  color: white;
+  width: 33%;
+  height: 3em;
+  transition: background-color 0.2s ease-out;
+}
+
+.date-picker{
+  font-size: 1.5em;
+  border: 1px solid #fca311;
+  border-radius: 20px;
+  background-color: #fca311;
+  color: white;
+  width: 30%;
+  height: 3em;
+  padding: 0.25em;
+  text-align: center;
+}
+
+
+h1 {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+h2 {
+  text-align: center;
+  font-weight: 100;
+}
+
+img {
+  width: 100px;
+}
+
+.instruccions{
+  width: 50%;
+  margin: auto;
+  margin-top: 1em;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  overflow: hidden;
+  align-items: center;
+  gap: 1em;
+}
+
+.instruccions:hover{
+  cursor: pointer;
+}
+
+
+.search-text{
+  color: #1857a6;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+
+//breakpoint
+
+@media (max-width: 768px) {
+  .search-text{
+    font-size: 1.5em;
+  }
+
+  .button{
+    font-size: 1.5em;
+
+  }
+}
+
+
+.disabled {
+  background-color: gray;
+  border: 1px solid gray;
+}

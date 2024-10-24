@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 
 
@@ -20,41 +20,24 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
   templateUrl: './results.component.html',
   styleUrl: './results.component.scss'
 })
-export class ResultsComponent {
+export class ResultsComponent implements OnInit {
 
   bops: BopResponse[] = [];
   notFound = false;
 
   constructor(
-    private readonly router: Router,
     private readonly bopsService: BopsService,
   ){
-    const criteria = new URLSearchParams(window.location.search).get('criteria');
-    const startDate = new URLSearchParams(window.location.search).get('start_date');
-    const endDate = new URLSearchParams(window.location.search).get('end_date');
 
-    if(criteria!=null && criteria!=''){
-      //separamos el criteria por $ y a los pares les ponemos delante un $
-      const criteriaSplitted = criteria.split('$').map((c, i) => i % 2 != 0 ? `$${c}` : c);
-      const search:SearchInterface = {
-        criteria: criteriaSplitted,
-        start_date: startDate || '',
-        end_date: endDate || ''
+  }
+  ngOnInit(): void {
+
+    this.bopsService.bops$.subscribe(
+      (bops) => {
+        this.bops = bops;
+        this.notFound = this.bops.length === 0;
       }
-      console.log(search);
-
-
-      this.bopsService.getBops(search).subscribe((bops) => {
-        if(bops.length === 0){
-          this.notFound = true;
-        }
-        this.bops = bops.sort((a, b) => b.bop.date > a.bop.date ? 1: 0);
-        console.log(this.bops);
-
-      })
-    }else{
-      this.router.navigate(['/']);
-    }
+    )
   }
 
 

@@ -1,8 +1,4 @@
-<div class="screen">
-<div class="header">
-  <a href="/"><mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="home"></mat-icon></a>
-  <h2>Búsqueda de boletines</h2>
-</div>
+
 <div class="main">
   @if(!notFound){
 
@@ -11,6 +7,7 @@
         <result [bop]="bop"></result>
       }
     }@else {
+      <p>{{this.bops}}</p>
       <mat-spinner class="margin-top-30"></mat-spinner>
     }
   }@else {
@@ -19,5 +16,4 @@
       <p>Prueba a realizar una nueva búsqueda</p>
     </div>
   }
-</div>
 </div>
