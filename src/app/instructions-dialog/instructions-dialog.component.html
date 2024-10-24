@@ -1,1 +1,14 @@
-<p>instructions-dialog works!</p>
+<!-- <div class="dialog">
+  <p>Las instrucciones para usar el búscador</p>
+</div> -->
+<h2 mat-dialog-title>Instrucciones para el uso del buscador</h2>
+<mat-dialog-content>
+  <p>Para búscar palabras clave en los boletines solo hay que poner las palabras que queremos búscar,
+    indicando los caracteres por los que estan separadas (cada letra, espacio o simbolo es un caracter)
+  con el número entre simbolos "$" por ejemplo si queremos buscar oposiciones y deporte separado por 50
+caracteres deberíamos buscar oposiciones$50$deporte</p>
+
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button [mat-dialog-close]="" cdkFocusInitial>Ok</button>
+</mat-dialog-actions>

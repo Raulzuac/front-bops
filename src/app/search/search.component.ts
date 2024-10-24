@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { MatDividerModule } from '@angular/material/divider';
 import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
@@ -9,6 +9,21 @@ import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { BopsService } from '../services/bops.service';
 
+import { Output, EventEmitter } from '@angular/core';
+
+import {
+  MAT_DIALOG_DATA,
+  MatDialog,
+  MatDialogActions,
+  MatDialogClose,
+  MatDialogContent,
+  MatDialogRef,
+  MatDialogTitle,
+} from '@angular/material/dialog';
+
+import { InstructionsDialogComponent } from '../instructions-dialog/instructions-dialog.component';
+
+
 @Component({
   selector: 'app-search',
   standalone: true,
@@ -17,6 +32,11 @@ import { BopsService } from '../services/bops.service';
   styleUrl: './search.component.scss'
 })
 export class SearchComponent {
+
+  readonly dialog= inject(MatDialog);
+
+
+  @Output() searchEvent = new EventEmitter<number>();
 
   date_from?: string;
   date_to?: string;
@@ -71,11 +91,11 @@ export class SearchComponent {
       start_date,
       end_date
     });
+    this.searchEvent.emit(1);
   }
 
-  navigateToResults(){
-
-  }
-
+  openInstructionsDialog(){
+    this.dialog.open(InstructionsDialogComponent);
+   }
 
 }

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 
 import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
@@ -14,6 +14,7 @@ import { SearchComponent } from "../search/search.component";
 import { ResultsComponent } from "../results/results.component";
 import { BopsService } from '../services/bops.service';
 import { BopResponse } from '../config/interfaces/bops-response.interface';
+
 @Component({
   selector: 'app-main',
   standalone: true,
@@ -23,6 +24,8 @@ import { BopResponse } from '../config/interfaces/bops-response.interface';
 })
 export class MainComponent {
 
+  currentPage:number = 0;
+
   bops:BopResponse[] = [];
   constructor(
     private readonly bopsService: BopsService,
@@ -31,6 +34,11 @@ export class MainComponent {
     this.bops = this.bopsService.bops;
     console.log(this.bops);
 
+   }
+   //recibe el evento de un event emmiter
+   navigate(page:number){
+      console.log(page)
+      this.currentPage = page;
    }
 
 

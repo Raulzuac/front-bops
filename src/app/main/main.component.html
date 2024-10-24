@@ -1,7 +1,7 @@
 <div class="screen">
-  <mat-tab-group class="screen">
+  <mat-tab-group class="screen" [(selectedIndex)]="currentPage">
     <mat-tab label="Busqueda">
-      <app-search ></app-search>
+      <app-search (searchEvent)="navigate($event)"></app-search>
     </mat-tab>
     <mat-tab label="Resultados">
       <app-results></app-results>
