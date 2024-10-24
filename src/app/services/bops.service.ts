@@ -16,8 +16,8 @@ export class BopsService {
   ) { }
 
 
-  // url = 'http://217.182.209.193:3000/'
-  url = 'http://localhost:3000/'
+  url = 'http://217.182.209.193:3000/'
+  // url = 'http://localhost:3000/'
   bops: BopResponse[] = [];
   bops$ = new BehaviorSubject<BopResponse[]>(this.bops);
 
