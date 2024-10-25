@@ -16,7 +16,7 @@ export class BopsService {
   ) { }
 
 
-  url = 'https://217.182.209.193:3000/'
+  url = 'https://buscaboletines.com:3000/'
   // url = 'https://localhost:3000/'
   bops: BopResponse[] = [];
   bops$ = new BehaviorSubject<BopResponse[]>(this.bops);
