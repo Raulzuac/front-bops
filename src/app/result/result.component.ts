@@ -26,14 +26,14 @@ export class ResultComponent {
 
 
   copyLink(){
-    navigator.clipboard.writeText(`localhost:3000/downloadpdf/${this.bop.bopId}`);
+    navigator.clipboard.writeText(`https://buscaboletines.com:3000/downloadpdf/${this.bop.bopId}`);
     this._snackBar.open('Enlace copiado al portapapeles', 'Cerrar', {
       duration: 2000
     })
   }
 
   downloadPDF(){
-    window.open(`http://localhost:3000/downloadpdf/${this.bop.bopId}`);
+    window.open(`https://buscaboletines.com:3000/downloadpdf/${this.bop.bopId}`);
   }
 
 
