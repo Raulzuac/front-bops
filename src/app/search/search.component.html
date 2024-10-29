@@ -7,10 +7,10 @@
     <input (change)="checkReady()" [(ngModel)]="date_to" class="date-picker" type="date" [(min)]="min_date_end" [(max)]="max_date_end">
     <button [ngClass]="{'button':true,'disabled':!ready}" (click)="search(search_criteria!)">Comenzar búsqueda</button>
   </div>
-  <div (click)="openInstructionsDialog()" class="instruccions">
+  <!-- <div (click)="openInstructionsDialog()" class="instruccions">
     <img src="https://buscaboletines.com/wp-content/uploads/2024/10/Instrucciones-de-uso.png" alt="Imagen busqueda">
     <p class="search-text">Ver instrucciones de uso</p>
-  </div>
+  </div> -->
   <!--
   <h1>Búsqueda de boletines</h1>
   <mat-form-field class="search-input" >

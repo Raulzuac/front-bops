@@ -22,8 +22,9 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 })
 export class ResultsComponent implements OnInit {
 
-  bops: BopResponse[] = [];
+  bops?: BopResponse[] = [];
   notFound = false;
+  loading = true;
 
   constructor(
     private readonly bopsService: BopsService,
@@ -34,11 +35,21 @@ export class ResultsComponent implements OnInit {
 
     this.bopsService.bops$.subscribe(
       (bops) => {
+        console.log(bops)
         this.bops = bops;
         this.notFound = this.bops.length === 0;
       }
     )
+
+    this.bopsService.searching$.subscribe(
+      (searching) => {
+        console.log(searching)
+        this.loading = searching;
+      }
+    )
+
   }
+
 
 
 

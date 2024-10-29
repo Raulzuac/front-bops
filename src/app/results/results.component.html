@@ -1,5 +1,24 @@
 
 <div class="main">
+  @if(!loading){
+
+    @if (notFound) {
+      <div class="margin-top-30 result-container">
+        <h2>No se han encontrado resultados</h2>
+        <p>Prueba a realizar una nueva búsqueda</p>
+      </div>
+
+    }@else {
+      @for (bop of bops; track $index) {
+        <result [bop]="bop"></result>
+      }
+    }
+  }@else {
+
+    <mat-spinner class="margin-top-30"></mat-spinner>
+  }
+</div>
+<!-- <div class="main">
   @if(!notFound){
 
     @if (bops.length > 0) {
@@ -16,4 +35,4 @@
       <p>Prueba a realizar una nueva búsqueda</p>
     </div>
   }
-</div>
+</div> -->
